@@ -14,6 +14,7 @@ rl.on("close", function () {
 })
 
 function solve(lines) {
+  //尚未通過
   // 計算回合數（index[0]）
   const roundCount = Number(lines[0]) + 1
 
