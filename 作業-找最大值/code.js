@@ -7,13 +7,13 @@ for (i = 1; i < 10; i++) {
 console.log("All numbers", arr)
 
 //每次拿到最大的放一邊
-let minNumber = arr[0]
+let maxNumber = arr[0]
 for (i = 0; i < arr.length; i++) {
-  if (arr[i] >= minNumber) {
-    minNumber = arr[i]
+  if (arr[i] >= maxNumber) {
+    maxNumber = arr[i]
   }
 }
-console.log("Max Number", minNumber)
+console.log("Max Number", maxNumber)
 
 function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min
