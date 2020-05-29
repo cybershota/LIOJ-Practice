@@ -35,6 +35,6 @@ function solve(lines) {
     remain -= Math.pow(2, power2)
     power2 = 0
   }
-  // console.log(bucket)
+  console.log(bucket)
   console.log(bucket.length)
 }
