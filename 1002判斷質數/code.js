@@ -14,45 +14,28 @@ rl.on("close", function () {
 });
 
 function solve(lines) {
-  for (i = 1; i < Number(lines[0]) + 1; i++) {
-    if (Number(lines[i]) === 1) {
-      console.log("Composite");
+  for (let i = 1; i <= Number(lines[0]); i++) {
+    if (isPrime(Number(lines[i]))) {
+      console.log(lines[i] + " Prime");
     } else {
-      if (isPrime(Number(lines[i])) === true) {
-        console.log("Prime");
-      } else {
-        console.log("Composite");
-      }
+      console.log(lines[i] + " Composite");
     }
   }
 }
 
 function isPrime(number) {
-  if (number % 2 === 0) {
-    if (number === 2) {
-      return true;
-    } else {
-      return false;
-    }
-  } else if (number % 3 === 0) {
-    if (number === 3) {
-      return true;
-    } else {
-      return false;
-    }
-  } else if (number % 5 === 0) {
-    if (number === 5) {
-      return true;
-    } else {
-      return false;
-    }
-  } else if (number % 7 === 0) {
-    if (number === 7) {
-      return true;
-    } else {
-      return false;
-    }
-  } else {
-    return true;
+  const prime = [2, 3, 5, 7, 11];
+  if (number === 1) {
+    return false;
   }
+  for (j = 2; j < 10000; j++) {
+    if (number % j === 0) {
+      if (number === j) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+  return true;
 }
